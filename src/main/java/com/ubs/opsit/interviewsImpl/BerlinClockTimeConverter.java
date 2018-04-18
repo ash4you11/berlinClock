@@ -14,14 +14,7 @@ public class BerlinClockTimeConverter implements TimeConverter {
         for (String part : aTime.split(":")) {
             parts.add(Integer.parseInt(part));
         }
-       /* return new String[] {
-                getSeconds(parts.get(2)),
-                getTopHours(parts.get(0)),
-                getBottomHours(parts.get(0)),
-                getTopMinutes(parts.get(1)),
-                getBottomMinutes(parts.get(1))
-        };*/
-        
+      
         return String.format(  getSeconds(parts.get(2)) + "%n"
         					+  getTopHours(parts.get(0)) + "%n"
         					+  getBottomHours(parts.get(0)) + "%n"
@@ -29,9 +22,6 @@ public class BerlinClockTimeConverter implements TimeConverter {
         					+ getBottomMinutes(parts.get(1)));
 
 	}
-	
-	
-	
 	
 	
 	protected String getSeconds(int number) {
